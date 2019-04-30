@@ -18,12 +18,16 @@ The client is written in Go, with pre-compiled binaries available for Mac,
 Windows, Linux, and FreeBSD. Check out the [website](http://git-lfs.github.com)
 for an overview of features.
 
+客户端是用Go编写的，预编译的二进制文件可用于Mac、Windows、Linux和FreeBSD。查看[网站](http://gitlfs.github.com)以获得特性概述。
+
 ## Getting Started
 
 ### Downloading
 
 You can install the Git LFS client in several different ways, depending on your
 setup and preferences.
+
+根据您的设置和首选项，可以通过几种不同的方式安装Git LFS客户端。
 
 * **Linux users**. Debian and RPM packages are available from
   [PackageCloud](https://packagecloud.io/github/git-lfs/install).
@@ -45,9 +49,14 @@ available instructions in our
 
 The [binary packages](https://github.com/git-lfs/git-lfs/releases) include a script which will:
 
+[二进制包](https://github.com/gitlfs/gitlfs/releases)包含一个脚本，该脚本将:
+
 - Install Git LFS binaries onto the system `$PATH`
 - Run `git lfs install` to
 perform required global configuration changes.
+
+-在系统“$PATH”上安装Git LFS二进制文件
+-运行“git lfs install”来执行所需的全局配置更改。
 
 ```ShellSession
 $ ./install.sh
@@ -59,6 +68,9 @@ $ ./install.sh
 - Git LFS requires global configuration changes once per-machine. This can be done by
 running:
 
+-将“git-lfs”二进制文件放在系统的可执行文件“$PATH”或等效文件上。
+- Git LFS需要每台机器进行一次全局配置更改。这可以通过运行:
+
 ```ShellSession
 $ git lfs install
 ```
@@ -68,6 +80,8 @@ $ git lfs install
 To begin using Git LFS within a Git repository that is not already configured
 for Git LFS, you can indicate which files you would like Git LFS to manage.
 This can be done by running the following _from within a Git repository_:
+
+要在尚未为Git LFS配置的Git存储库中开始使用Git LFS，可以指示希望Git LFS管理哪些文件。这可以通过在Git存储库中运行以下_from来实现:
 
 ```bash
 $ git lfs track "*.psd"
@@ -80,6 +94,8 @@ more about this pattern syntax
 After any invocation of `git-lfs-track(1)` or `git-lfs-untrack(1)`, you _must
 commit changes to your `.gitattributes` file_. This can be done by running:
 
+在调用“git-lfs-track(1)”或“git-lfs-untrack(1)”之后，您必须将更改提交到您的“。gitattributes file_。这可以通过运行:
+
 ```bash
 $ git add .gitattributes
 $ git commit -m "track *.psd files using Git LFS"
@@ -88,6 +104,8 @@ $ git commit -m "track *.psd files using Git LFS"
 You can now interact with your Git repository as usual, and Git LFS will take
 care of managing your large files. For example, changing a file named `my.psd`
 (tracked above via `*.psd`):
+
+现在，您可以像往常一样与Git存储库进行交互，Git LFS将负责管理大型文件。例如，更改名为'my.psd'的文件(以上通过' *.psd '跟踪):
 
 ```bash
 $ git add my.psd
